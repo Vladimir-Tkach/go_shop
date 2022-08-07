@@ -1,0 +1,96 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+    include pug/_head 
+    body
+
+        main.shop
+            .container
+                a(href="#").go-back-bnt
+                    .go-back-arrow ←
+                    .go-back-txt Оформление заказа
+
+                .order
+                    form.order__info
+                        .order__title Личные данные
+                        .order__inputs.person_data
+                            .order__inputs-item
+                                input(type='text' placeholder="Имя*").order__input.required
+                                #name-error.error-txt.hide Введите имя
+                            .order__inputs-item
+                                input(type='text' placeholder="Телефон*").order__input.required
+                                #phone-error.error-txt.hide Введите телефон
+                            .order__inputs-item
+                                input(type='text' placeholder="Фамилия*").order__input.required
+                                #family-error.error-txt.hide Введите фамилию
+                            .order__inputs-item
+                                input(type='text' placeholder="Email*").order__input.required
+                                #email-error.error-txt.hide Введите email
+
+                        .order__title Способ доставки
+                        .order__radio
+                            .order__radio-item
+                                input(type="radio" name="radio" value="pochta" id="pochta" class='delivery' checked).radio-btn
+                                label(for="pochta")
+                                .order__radio-txt
+                                    .order__radio-name Почта России
+                                    .order__radio-price 200 руб., от 9 до 20 дней
+                            .order__radio-item
+                                input(type="radio" name="radio" value="sdek" id="sdek" class='delivery').radio-btn
+                                label(for="sdek")
+                                .order__radio-txt
+                                    .order__radio-name СДЭК
+                                    .order__radio-price 500 руб., от 15 до 35 дней
+                            .order__radio-item
+                                input(type="radio" name="radio" value="sdek-courier" id="sdek-courier" class='delivery').radio-btn
+                                label(for="sdek-courier")
+                                .order__radio-txt
+                                    .order__radio-name СДЭК курьер
+                                    .order__radio-price 500 руб., от 15 до 35 дней
+
+                        .order__title Адрес доставки
+                        .order__inputs.address_data
+                            .address_data_form
+                                .order__inputs-item.input
+                                    input(type='text' placeholder="Страна*").order__input.required_address
+                                    #counry-error.error-txt.hide Введите имя
+                                .order__inputs-item.input   
+                                    input(type='text' placeholder="Город*").order__input.required_address
+                                    #city-error.error-txt.hide Введите телефон
+                                .order__inputs-item.input
+                                    input(type='text' placeholder="Индекс*").order__input.required_address
+                                    #index-error.error-txt.hide Введите фамилию
+                                .order__inputs-item.input
+                                    input(type='text' placeholder="Улица*").order__input.required_address
+                                    #street-error.error-txt.hide Введите email
+                                .order__inputs-item.input
+                                    input(type='text' placeholder="Дом/корпус*").order__input.required_address
+                                    #house-error.error-txt.hide Введите фамилию
+                                .order__inputs-item.input
+                                    input(type='text' placeholder="Квартира/офис*").order__input.required_address
+                                    #flat-error.error-txt.hide Введите email
+                                .order__inputs-item.order__inputs-comment.textarea
+                                    textarea(type='text' placeholder="Комментарий к заказу").order__input.order__input-comment
+                            .sdek_map.hide
+
+                    .order__payment
+                        .order__payment-title Способы оплаты
+                        .order__payment-choose
+                            select
+                                option 💳 Картой онлайн 
+                                option 💳 Картой при получении
+                        .order__payment-price
+                            .order__payment-txt Сумма заказа
+                            .order__payment-txt 24 560 ₽
+                        .order__payment-price
+                            .order__payment-txt Количество товаров
+                            .order__payment-txt 23
+                        .order__payment-price.paymant-summ
+                            .order__payment-txt Итого
+                            .order__payment-txt 24 060 ₽
+                        a(href="#").order__payment-btn 
+                            .order__payment-btn-txt Перейти к оплате
+                        .data-processing-block
+                            input(type="checkbox" id="data-processing").data-processing
+                            .data-processing-txt Я даю согласие на обработку персональных данных

@@ -1,0 +1,358 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+  include pug/_head 
+  body  
+    .favorites-and-basket
+      a(href="#").favorites-image.hide
+        img(class="favorites-icon" src=require(`../src/images/black_heart.svg`) alt="black_heart")
+      a(href="#").basket-image.hide
+        img(class="basket-icon" src=require(`../src/images/black_basket.svg`) alt="black_heart")
+        img(class="basket-ellipse" src=require(`../src/images/black_ellipse.svg`) alt="black_ellipse")
+        .basket-ellipse__txt 0
+
+    .shop__banner-swiper-block
+      .shop__switcher 
+        .shop__switcher-dots
+          .shop__switcher-dot.shop__switcher-dot--active
+          .shop__switcher-dot
+          .shop__switcher-dot
+      .shop__banner-swiper
+        .shop__banner-item
+          .shop__banner-title-block
+            .shop__banner-title 
+              |Новая 
+              br
+              |коллекция GO 
+            .shop__banner-arrow ↙
+        .shop__banner-item
+          .shop__banner-title-block
+            .shop__banner-title 
+              |Новая 
+              br
+              |коллекция GO 
+            .shop__banner-arrow ↙
+        .shop__banner-item
+          .shop__banner-title-block
+            .shop__banner-title 
+              |Новая 
+              br
+              |коллекция GO 
+            .shop__banner-arrow ↙
+
+    main.shop
+      .shop__nav
+        .shop__nav-list.shop__nav-list-top
+          a(href="").shop__nav-item одежда
+          a(href="").shop__nav-item джерси
+          a(href="").shop__nav-item аксессуары
+        .shop__nav-list.shop__nav-list-bottom
+          a(href="").shop__nav-item сувениры
+          a(href="").shop__nav-item новинки
+
+      .flex_container
+        .shop__gender-select.gender-select
+          a(href='#').gender-select__item
+            .gender-select__image.scale
+              +jpg("112240")
+            .gender-select__text Мужчины
+            .gender-select__bg-opaciti
+          a(href='#').gender-select__item
+            .gender-select__image.scale
+              +png("gender_select_image_wuman")
+            .gender-select__text Женщины
+            .gender-select__bg-opaciti
+          a(href='#').gender-select__item
+            .gender-select__image.scale
+              +png("gender_select_image_children")
+            .gender-select__text Дети
+            .gender-select__bg-opaciti
+
+      .flex_container
+        .shop__new-product
+          .shop__title-block
+            .shop__title Новинки
+            .shop__title-arrow ↙
+          .shop__swiper-block
+            .shop__swiper
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-sale sale
+                  +png('swiper_image_01')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                    del.shop__swiper-item-old-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-hit ХИТ
+                  +png('swiper_image_02')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-sale sale
+                  .shop__swiper-item-hit.shop__swiper-item-hit-twice  ХИТ
+                  +png('swiper_image_03')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_01')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_02')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_03')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+
+      .flex_container
+        .shop__categories.categories
+          .shop__title-block
+            .shop__title Категории
+            .shop__title-arrow ↙
+          .categories__list
+            a(href="#").categories__item
+              .categories__item-image.scale
+                +jpg('112240')
+              .categories__item-footer
+                .categories__item-name сувениры
+                .categories__item-arrow →
+            a(href="#").categories__item
+              .categories__item-image.scale
+                +png('categories_image_02')
+              .categories__item-footer
+                .categories__item-name аксессуары
+                .categories__item-arrow →
+
+      .flex_container
+        .swipe_content
+          .shop__swiper-block
+            .shop__swiper
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-sale sale
+                  +png('swiper_image_01')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                    del.shop__swiper-item-old-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-hit ХИТ
+                  +png('swiper_image_02')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-sale sale
+                  .shop__swiper-item-hit.shop__swiper-item-hit-twice  ХИТ
+                  +png('swiper_image_03')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_01')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_02')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_03')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+
+      .flex_container
+        .categories__list.categories
+          a(href="#").categories__item
+            .categories__item-image.scale
+              +png('categories_image_03')
+            .categories__item-footer
+              .categories__item-name сувениры
+              .categories__item-arrow →
+          a(href="#").categories__item
+            .categories__item-image.scale
+              +png('categories_image_04')
+            .categories__item-footer
+              .categories__item-name аксессуары
+              .categories__item-arrow →
+
+      .flex_container
+        .swipe_content
+          .shop__swiper-block
+            .shop__swiper
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-sale sale
+                  +png('swiper_image_01')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                    del.shop__swiper-item-old-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-hit ХИТ
+                  +png('swiper_image_02')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  .shop__swiper-item-sale sale
+                  .shop__swiper-item-hit.shop__swiper-item-hit-twice  ХИТ
+                  +png('swiper_image_03')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_01')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_02')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+              .shop__swiper-item
+                .shop__swiper-item-image.scale
+                  .shop__swiper-item-like
+                    +svg('like')
+                    img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+                  +png('swiper_image_03')
+                .shop__swiper-item-footer
+                  .shop__swiper-item-txt
+                    .shop__swiper-item-name Футболка клуба GO!
+                    .shop__swiper-item-price 2 500 ₽
+                  a(href="#").shop__swiper-item-basket
+                    +svg('basket')
+
+
+
+
+

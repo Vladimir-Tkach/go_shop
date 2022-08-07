@@ -1,0 +1,179 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+	include pug/_head 
+	body
+
+		main.shop
+			.container
+				.product-added__modal.hide
+					.product-added__content
+						.product-added__title-block
+							.product-added__title Товар добавлен в корзину
+							.product-added__close-btn x
+						.product-added__info
+							.product-added__image 
+								+png('swiper_image_02')
+							.product-added__txt 
+								.product-added__name Футболка с принтом
+								.product-added__article Артикул: 5689865
+								.product-added__size Размер: S
+							.product-added__price-block 
+								.product-added__price 2 500 ₽
+						.product-added__btn-block 
+							.product-added__btn
+								.product-added__btn-txt Продолжить покупки
+							a(href="#").product-added__btn
+								.product-added__btn-txt Перейти в корзину
+				a(href="#").go-back-bnt
+					.go-back-arrow ←
+					.go-back-txt В каталог
+				.shop__card-products.card-products
+					.sld-wrp
+						.shop__switcher 
+							.shop__switcher-dots
+								.shop__switcher-dot.shop__switcher-dot--active
+								.shop__switcher-dot
+								.shop__switcher-dot
+						.slider-for
+							.card-products__gallery-image.main_image
+								span.custom_label_preview
+								+png('hockey')
+							.card-products__gallery-image
+								+png('categories_image_03')
+							.card-products__gallery-image
+								+png('categories_image_02')
+							.card-products__gallery-image
+								+png('categories_image_01')
+						.slider-nav
+							.card-products__gallery-image
+								+png('hockey')
+							.card-products__gallery-image
+								+png('categories_image_03')
+							.card-products__gallery-image
+								+png('categories_image_02')
+							.card-products__gallery-image
+								+png('categories_image_01')
+					.card-products__info
+						.card-products__title-block
+							.card-products__title Футболка с принтом
+							.card-products__vendor-code Артикул: 
+								span 5689865
+							.card-products__size-selection-block
+								.card-products__size-selection-title Выберите размер
+								.card-products__size-selection
+									.card-products__size-selection-item XS
+									.card-products__size-selection-item S
+									.card-products__size-selection-item M
+									.card-products__size-selection-item L
+									.card-products__size-selection-item XL
+
+							.card-products__size-selection-title Выберите размер
+								.card-products__payment-choose
+									select 
+										option Ваша подпись 
+										option Ваша подпись
+										option Ваша подпись
+										option Ваша подпись
+								.card-products__inputs.custom_label
+									.card-products__inputs-item.surname
+										input(type='text' placeholder="Фамилия").card-products__input.surname_input
+									.card-products__inputs-item.number
+										input(type='text' placeholder="Номер").card-products__input
+
+							.card-products__price-and-buy-block
+								.card-products__price 2 500 ₽
+								.card-products__buy-block
+									.card-products__basket 
+										+svg('basket_black')
+									.card-products__buy Купить
+							.card-products__description-block
+								.card-products__description
+									.card-products__description-title Описание товара
+									.card-products__text Несколько лет назад мы решили популяризировать любительский хоккей и создать престижный дивизион с шикарным 
+								.card-products__compound
+									.card-products__compound-title Состав
+									.card-products__compound-text 100% хлопок
+								.card-products__delivery
+									.card-products__delivery-icon
+										+svg('delivery')
+									.card-products__delivery-text Доставка в пункты выдачи или курьером
+				.shop__recommended-products.recommended-products
+					.recommended-products__title С этим товаром покупают
+						.recommended-products__section
+							.products__list
+								a(href='#').products__item
+									.products__item-image.scale
+										.products__item-like
+											+svg('like')
+											img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+										.products__item-sale sale
+										+png('swiper_image_01')
+									.products__item-footer
+										.products__item-txt
+											.products__item-name Футболка клуба GO!
+											.products__item-price 2 500 ₽
+											del.products__item-old-price 2 500 ₽
+										.products__item-basket
+											+svg('basket')
+								a(href='#').products__item
+									.products__item-image.scale
+										.products__item-like
+											+svg('like')
+											img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+										.products__item-hit ХИТ
+										+png('swiper_image_02')
+									.products__item-footer
+										.products__item-txt
+											.products__item-name Футболка клуба GO!
+											.products__item-price 2 500 ₽
+										.products__item-basket
+											+svg('basket')
+								a(href='#').products__item
+									.products__item-image.scale
+										.products__item-like
+											+svg('like')
+											img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+										.products__item-sale sale
+										.products__item-hit.products__item-hit-twice  ХИТ
+										+png('swiper_image_03')
+									.products__item-footer
+										.products__item-txt
+											.products__item-name Футболка клуба GO!
+											.products__item-price 2 500 ₽
+										.products__item-basket
+											+svg('basket')
+								a(href='#').products__item
+									.products__item-image.scale
+										.products__item-like
+											+svg('like')
+											img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+										+png('swiper_image_01')
+									.products__item-footer
+										.products__item-txt
+											.products__item-name Футболка клуба GO!
+											.products__item-price 2 500 ₽
+											del.products__item-old-price 2 500 ₽
+										.products__item-basket
+											+svg('basket')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

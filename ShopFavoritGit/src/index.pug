@@ -1,0 +1,131 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+  include pug/_head 
+  body  
+    main.shop 
+      .container
+        a(href="#").go-back-bnt
+          .go-back-arrow ←
+          .go-back-txt Избранное
+        .products__list
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active" src=require(`../src/images/full_like.svg`) alt="full_like")
+              .products__item-sale sale
+              +png('swiper_image_01')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+                del.products__item-old-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active" src=require(`../src/images/full_like.svg`) alt="full_like")
+              .products__item-hit ХИТ
+              +png('swiper_image_02')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              .products__item-sale sale
+              .products__item-hit.products__item-hit-twice  ХИТ
+              +png('swiper_image_03')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              +png('swiper_image_01')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+                del.products__item-old-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              +png('swiper_image_02')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              +png('swiper_image_03')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              +png('swiper_image_01')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+                del.products__item-old-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              +png('swiper_image_02')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+          a(href="#").products__item
+            .products__item-image.scale
+              .products__item-like
+                +svg('like')
+                img(class="like-active " src=require(`../src/images/full_like.svg`) alt="full_like")
+              +png('swiper_image_03')
+            .products__item-footer
+              .products__item-txt
+                .products__item-name Футболка клуба GO!
+                .products__item-price 2 500 ₽
+              .products__item-basket
+                +svg('basket')
+
+
+
+

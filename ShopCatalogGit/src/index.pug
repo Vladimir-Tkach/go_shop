@@ -1,0 +1,356 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+	include pug/_head 
+	body
+		.catalog__modal.modal.hide(id='search-modal') 
+			.modal__content
+				.catalog__title-block
+					.catalog__title Поиск
+					.modal__close
+						.modal__close-stick
+						.modal__close-stick
+				form.catalog__serch-form
+					.input-block
+						input(type="search" placeholder="Поиск").modal-search-input
+						.input-clear.modal-search-input-clear x
+
+		.catalog__modal.modal.hide(id='filters-modal') 
+			.modal__content
+				.catalog__title-block
+					.catalog__title Фильтры
+					.modal__close
+						.modal__close-stick
+						.modal__close-stick
+				.catalog__filters-form.filters-form_mobile
+					.catalog__filters_products
+						.catalog__filters_products-category
+							.catalog__filters_subtitle Товары
+							.catalog__filters_checkbox
+								input(type="checkbox" name="all" id='all')
+								label(for="all") Все
+							.catalog__filters_checkbox
+								input(type="checkbox" name="sweatshirts" id='sweatshirts')
+								label(for="sweatshirts") Кофты
+							.catalog__filters_checkbox
+								input(type="checkbox" name="t-shirts" id='t-shirts')
+								label(for="t-shirts") Футболки
+							.catalog__filters_checkbox
+								input(type="checkbox" name="hoodies" id='hoodies')
+								label(for="hoodies") Толстовки 
+							.catalog__filters_checkbox
+								input(type="checkbox" name="caps" id='caps')
+								label(for="caps") Кепки 
+							.catalog__filters_checkbox
+								input(type="checkbox" name="souvenirs" id='souvenirs')
+								label(for="souvenirs") Сувениры 
+						.catalog__filters_products-category
+							.catalog__filters_subtitle Раздел
+							.catalog__filters_checkbox
+								input(type="checkbox" name="male" id='male')
+								label(for="male") Мужчины 
+							.catalog__filters_checkbox
+								input(type="checkbox" name="female" id='female')
+								label(for="female") Женщины
+							.catalog__filters_checkbox
+								input(type="checkbox" name="children" id='children')
+								label(for="children") Дети
+						.catalog__filters_products-category
+							.catalog__filters_subtitle Цена
+							.catalog__filters_slider_values
+								span.slider-range_min_mobile 0
+								span.slider-range_max_mobile 0
+							#slider-range_mobile
+						.catalog__filters_products-category
+							.catalog__filters_subtitle Коллекция
+							.catalog__filters_checkbox
+								input(type="checkbox" name="collection_go" id='collection_go')
+								label(for="collection_go") GO
+							.catalog__filters_checkbox
+								input(type="checkbox" name="collection_t-shirts" id='collection_t-shirts')
+								label(for="collection_t-shirts") Футболки
+							.catalog__filters_checkbox
+								input(type="checkbox" name="collection_sweatshirts" id='collection_sweatshirts')
+								label(for="collection_sweatshirts") Кофты
+							.catalog__filters_checkbox
+								input(type="checkbox" name="collection_summer" id='collection_summer')
+								label(for="collection_summer") Летняя 
+				.modal__btn(id="modal-apply-btn-filters")
+					.modal__btn-txt Применить
+				.modal__btn.modal-reset-btn(id="modal-reset-btn-filters")
+					.modal__btn-txt Сбросить
+
+		.catalog__modal.modal.hide(id='gender-modal') 
+			.modal__content
+				.catalog__title-block
+					.catalog__title Разделы
+					.modal__close
+						.modal__close-stick
+						.modal__close-stick
+				.modal__btn.close-btn
+					.modal__btn-txt Закрыть
+				.modal__btn(id="modal-apply-btn-gender").hide
+					.modal__btn-txt Применить
+				.modal__btn.modal-reset-btn(id="modal-reset-btn-gender").hide
+					.modal__btn-txt Сбросить
+
+		.catalog__modal.modal.hide(id='price-modal') 
+			.modal__content
+				.catalog__title-block
+					.catalog__title Цена
+					.modal__close
+						.modal__close-stick
+						.modal__close-stick
+				.modal__btn.close-btn
+					.modal__btn-txt Закрыть
+				.modal__btn(id="modal-apply-btn-price").hide
+					.modal__btn-txt Применить
+				.modal__btn.modal-reset-btn(id="modal-reset-btn-price").hide
+					.modal__btn-txt Сбросить
+
+		.catalog__modal.modal.hide(id='collection-modal') 
+			.modal__content
+				.catalog__title-block
+					.catalog__title Коллекции
+					.modal__close
+						.modal__close-stick
+						.modal__close-stick
+				.modal__btn.close-btn
+					.modal__btn-txt Закрыть
+				.modal__btn(id="modal-apply-btn-collection").hide
+					.modal__btn-txt Применить
+				.modal__btn.modal-reset-btn(id="modal-reset-btn-collection").hide
+					.modal__btn-txt Сбросить
+
+		.catalog__modal.modal.hide(id='category-modal') 
+			.modal__content
+				.catalog__title-block
+					.catalog__title Товары
+					.modal__close
+						.modal__close-stick
+						.modal__close-stick
+				.modal__btn.close-btn
+					.modal__btn-txt Закрыть
+				.modal__btn(id="modal-apply-btn-category").hide
+					.modal__btn-txt Применить
+				.modal__btn.modal-reset-btn(id="modal-reset-btn-category").hide
+					.modal__btn-txt Сбросить
+
+		.catalog__banner
+			.catalog__banner-title-block
+				.catalog__banner-title 
+					|Новая 
+					br
+					|коллекция GO 
+				.catalog__banner-arrow ↙️
+		main.shop
+			.shop__catalog.catalog
+				.catalog__filters
+					.catalog__title-block
+						.catalog__title Фильтры
+					.catalog__filters-form
+						.catalog__filters_products
+							.catalog__filters_products-category
+								.catalog__filters_subtitle Товары
+								.catalog__filters_checkbox
+									input(type="checkbox" name="all" id='all')
+									label(for="all") Все
+								.catalog__filters_checkbox
+									input(type="checkbox" name="sweatshirts" id='sweatshirts')
+									label(for="sweatshirts") Кофты
+								.catalog__filters_checkbox
+									input(type="checkbox" name="t-shirts" id='t-shirts')
+									label(for="t-shirts") Футболки
+								.catalog__filters_checkbox
+									input(type="checkbox" name="hoodies" id='hoodies')
+									label(for="hoodies") Толстовки 
+								.catalog__filters_checkbox
+									input(type="checkbox" name="caps" id='caps')
+									label(for="caps") Кепки 
+								.catalog__filters_checkbox
+									input(type="checkbox" name="souvenirs" id='souvenirs')
+									label(for="souvenirs") Сувениры 
+							.catalog__filters_products-category
+								.catalog__filters_subtitle Раздел
+								.catalog__filters_checkbox
+									input(type="checkbox" name="male" id='male')
+									label(for="male") Мужчины 
+								.catalog__filters_checkbox
+									input(type="checkbox" name="female" id='female')
+									label(for="female") Женщины
+								.catalog__filters_checkbox
+									input(type="checkbox" name="children" id='children')
+									label(for="children") Дети
+							.catalog__filters_products-category
+								.catalog__filters_subtitle Цена
+								.catalog__filters_slider_values
+									span.slider-range_min 0
+									span.slider-range_max 0
+								#slider-range
+							.catalog__filters_products-category
+								.catalog__filters_subtitle Коллекция
+								.catalog__filters_checkbox
+									input(type="checkbox" name="collection_go" id='collection_go')
+									label(for="collection_go") GO
+								.catalog__filters_checkbox
+									input(type="checkbox" name="collection_t-shirts" id='collection_t-shirts')
+									label(for="collection_t-shirts") Футболки
+								.catalog__filters_checkbox
+									input(type="checkbox" name="collection_sweatshirts" id='collection_sweatshirts')
+									label(for="collection_sweatshirts") Кофты
+								.catalog__filters_checkbox
+									input(type="checkbox" name="collection_summer" id='collection_summer')
+									label(for="collection_summer") Летняя 
+				.catalog__products.products
+					a(href="#").go-back-bnt
+						.go-back-arrow ←
+						.go-back-txt В магазин
+					.catalog__title-block
+						.catalog__title Товары
+						.catalog__mobile-elements-block
+							form.catalog__serch-form
+								.input-block
+									input(type="search" placeholder="Поиск").modal-search-input
+									.input-clear.modal-search-input-clear x
+							.catalog__serch-mobail
+								+svg("serch-mobail")
+							.catalog__filters-mobail
+								+svg("mobail-filters")
+					ul.catalog__filters-mobail-nav-list
+						li.catalog__filters-mobail-item(id="gender-filter")
+							|Раздел
+							.catalog__filters-mobail-item-close.hide x
+						li.catalog__filters-mobail-item(id="price-filter")
+							|Цена
+							.catalog__filters-mobail-item-close.hide x
+						li.catalog__filters-mobail-item(id="collection-filter")
+							|Коллекции
+							.catalog__filters-mobail-item-close.hide x
+						li.catalog__filters-mobail-item(id="category-filter")
+							|Толстовки
+							.catalog__filters-mobail-item-close.hide x
+					.products__list
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								.products__item-sale sale
+								+png('swiper_image_01')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+									del.products__item-old-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								.products__item-hit ХИТ
+								+png('swiper_image_02')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								.products__item-sale sale
+								.products__item-hit.products__item-hit-twice  ХИТ
+								+png('swiper_image_03')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								+png('swiper_image_01')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+									del.products__item-old-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								+png('swiper_image_02')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								+png('swiper_image_03')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								+png('swiper_image_01')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+									del.products__item-old-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								+png('swiper_image_02')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+						a(href="#").products__item
+							.products__item-image.scale
+								.products__item-like
+									+svg('like')
+									img(class="like-active hide" src=require(`../src/images/full_like.svg`) alt="full_like")
+								+png('swiper_image_03')
+							.products__item-footer
+								.products__item-txt
+									.products__item-name Футболка клуба GO!
+									.products__item-price 2 500 ₽
+								.products__item-basket
+									+svg('basket')
+
+
+
+
+
+
+
+
