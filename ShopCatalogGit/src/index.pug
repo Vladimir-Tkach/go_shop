@@ -28,34 +28,34 @@ html(lang='en')
 						.catalog__filters_products-category
 							.catalog__filters_subtitle Товары
 							.catalog__filters_checkbox
-								input(type="checkbox" name="all" id='all')
-								label(for="all") Все
+								input(type="checkbox" name="all_mobile" id='all_mobile')
+								label(for="all_mobile") Все
 							.catalog__filters_checkbox
-								input(type="checkbox" name="sweatshirts" id='sweatshirts')
-								label(for="sweatshirts") Кофты
+								input(type="checkbox" name="sweatshirts_mobile" id='sweatshirts_mobile')
+								label(for="sweatshirts_mobile") Кофты
 							.catalog__filters_checkbox
-								input(type="checkbox" name="t-shirts" id='t-shirts')
-								label(for="t-shirts") Футболки
+								input(type="checkbox" name="t-shirts_mobile" id='t-shirts_mobile')
+								label(for="t-shirts_mobile") Футболки
 							.catalog__filters_checkbox
-								input(type="checkbox" name="hoodies" id='hoodies')
-								label(for="hoodies") Толстовки 
+								input(type="checkbox" name="hoodies_mobile" id='hoodies_mobile')
+								label(for="hoodies_mobile") Толстовки 
 							.catalog__filters_checkbox
-								input(type="checkbox" name="caps" id='caps')
-								label(for="caps") Кепки 
+								input(type="checkbox" name="caps_mobile" id='caps_mobile')
+								label(for="caps_mobile") Кепки 
 							.catalog__filters_checkbox
-								input(type="checkbox" name="souvenirs" id='souvenirs')
-								label(for="souvenirs") Сувениры 
+								input(type="checkbox" name="souvenirs_mobile" id='souvenirs_mobile')
+								label(for="souvenirs_mobile") Сувениры 
 						.catalog__filters_products-category
 							.catalog__filters_subtitle Раздел
 							.catalog__filters_checkbox
-								input(type="checkbox" name="male" id='male')
-								label(for="male") Мужчины 
+								input(type="checkbox" name="male_mobile" id='male_mobile')
+								label(for="male_mobile") Мужчины 
 							.catalog__filters_checkbox
-								input(type="checkbox" name="female" id='female')
-								label(for="female") Женщины
+								input(type="checkbox" name="female_mobile" id='female_mobile')
+								label(for="female_mobile") Женщины
 							.catalog__filters_checkbox
-								input(type="checkbox" name="children" id='children')
-								label(for="children") Дети
+								input(type="checkbox" name="children_mobile" id='children_mobile')
+								label(for="children_mobile") Дети
 						.catalog__filters_products-category
 							.catalog__filters_subtitle Цена
 							.catalog__filters_slider_values
@@ -65,17 +65,17 @@ html(lang='en')
 						.catalog__filters_products-category
 							.catalog__filters_subtitle Коллекция
 							.catalog__filters_checkbox
-								input(type="checkbox" name="collection_go" id='collection_go')
-								label(for="collection_go") GO
+								input(type="checkbox" name="collection_go_mobile" id='collection_go_mobile')
+								label(for="collection_go_mobile") GO
 							.catalog__filters_checkbox
-								input(type="checkbox" name="collection_t-shirts" id='collection_t-shirts')
-								label(for="collection_t-shirts") Футболки
+								input(type="checkbox" name="collection_t-shirts_mobile" id='collection_t-shirts_mobile')
+								label(for="collection_t-shirts_mobile") Футболки
 							.catalog__filters_checkbox
-								input(type="checkbox" name="collection_sweatshirts" id='collection_sweatshirts')
-								label(for="collection_sweatshirts") Кофты
+								input(type="checkbox" name="collection_sweatshirts_mobile" id='collection_sweatshirts_mobile')
+								label(for="collection_sweatshirts_mobile") Кофты
 							.catalog__filters_checkbox
-								input(type="checkbox" name="collection_summer" id='collection_summer')
-								label(for="collection_summer") Летняя 
+								input(type="checkbox" name="collection_summer_mobile" id='collection_summer_mobile')
+								label(for="collection_summer_mobile") Летняя 
 				.modal__btn(id="modal-apply-btn-filters")
 					.modal__btn-txt Применить
 				.modal__btn.modal-reset-btn(id="modal-reset-btn-filters")
@@ -230,6 +230,12 @@ html(lang='en')
 						li.catalog__filters-mobail-item(id="category-filter")
 							|Толстовки
 							.catalog__filters-mobail-item-close.hide x
+						li.catalog__filters-mobail-item(id="category-filter")
+							|Толстовки
+							.catalog__filters-mobail-item-close.hide x
+						li.catalog__filters-mobail-item(id="category-filter")
+							|Толстовки
+							.catalog__filters-mobail-item-close.hide x
 					.products__list
 						a(href="#").products__item
 							.products__item-image.scale
@@ -241,8 +247,9 @@ html(lang='en')
 							.products__item-footer
 								.products__item-txt
 									.products__item-name Футболка клуба GO!
-									.products__item-price 2 500 ₽
-									del.products__item-old-price 2 500 ₽
+									.products__item-price_block
+										.products__item-price 2 500 ₽
+										del.products__item-old-price 2 500 ₽
 								.products__item-basket
 									+svg('basket')
 						a(href="#").products__item
