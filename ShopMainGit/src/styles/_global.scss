@@ -471,10 +471,6 @@ a:hover {
     column-gap: 20px;
   }
 
-  &__swiper-block {
-    margin-top: 40px;
-  }
-
   &__swiper-item-image {
     width: 100%;
     position: relative;
@@ -736,21 +732,21 @@ a:hover {
 .shop__new-product {
   max-width: 1920px;
   width: 100%;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 //-----------------------NEW-PRODUCT-END-------------------
 
 //-----------------------CATEGORIES------------------------
 .categories {
-  margin-top: 90px;
+  margin-top: 30px;
   width: 100%;
   max-width: 1920px;
 
   &__list {
     display: flex;
     margin-top: 40px;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
     height: max-content;
   }
 
