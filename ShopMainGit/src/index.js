@@ -4,6 +4,7 @@ import './slick/slick.min.js';
 import './slick/slick.css';
 import './slick/slick-theme.css';
 import { toInteger } from 'lodash';
+import _ from 'lodash';
 
 $('document').ready(function () {
   // ИНИЦИАЛИЗАЦИЯ СЛАЙДЕРА БАНЕРА И ЕГО АВТОВОСПРОИЗВЕДЕНИЕ
@@ -14,6 +15,44 @@ $('document').ready(function () {
     arrows: false,
     autoplaySpeed: 3500,
   });
+
+  const initSwiper = () => {
+    // ИНИЦИАЛИЗАЦИЯ МАГАЗИННОГО СЛАЙДЕРА
+    $('.shop__swiper').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 2460,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: true,
+            adaptiveHeight: true,
+            variableWidth: true,
+          },
+        },
+        {
+          breakpoint: 1480,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            adaptiveHeight: true,
+            variableWidth: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: 'unslick',
+        },
+      ],
+    });
+  };
 
   // ДОБАВЛЕНИЕ И УДАЛЕНИЕ АКТИВНОГО КЛАССА ДЛЯ ТОЧЕК СЛАЙДЕРА
   $('.shop__banner-swiper').on('afterChange', function (currentSlide) {
@@ -38,47 +77,9 @@ $('document').ready(function () {
     }
   });
 
-  // ИНИЦИАЛИЗАЦИЯ МАГАЗИННОГО СЛАЙДЕРА
-  $('.shop__swiper').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 2460,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: true,
-          adaptiveHeight: true,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 1480,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
-          adaptiveHeight: true,
-          variableWidth: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          adaptiveHeight: true,
-          variableWidth: true,
-        },
-      },
-    ],
-  });
+  initSwiper();
+
+  $(window).on('resize', _.debounce(initSwiper, 200));
 
   // ПРОВЕРКА ВЫДЕЛЕННОГО В "ИЗБРАННОЕ" ПРИ НАЖАТИИ НА СЕРДЕЧКО НА ТОВАРЕ
   $('.shop__swiper-item-like').on('click', function () {
