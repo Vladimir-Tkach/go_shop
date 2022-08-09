@@ -41,7 +41,7 @@ $('document').ready(function () {
     $(childrens[1]).toggleClass('hide');
     return false;
   });
-  // ИННИЦИАЛИЗАЦИЯ ДВУХ СИНХРОННЫХ СЛАЙДЕРОВ
+  // ИНИЦИАЛИЗАЦИЯ ДВУХ СИНХРОННЫХ СЛАЙДЕРОВ
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -74,7 +74,6 @@ $('document').ready(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          settings: 'unslick',
         },
       },
     ],
@@ -114,5 +113,6 @@ $('document').ready(function () {
     custom_surname_label = this.value;
 
     $('.custom_label_preview').text(this.value);
+    $('.custom_label_preview').attr('text', this.value);
   });
 });
