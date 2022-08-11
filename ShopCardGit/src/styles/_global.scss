@@ -325,6 +325,14 @@ a:hover {
   top: 14px;
 }
 
+.slider-for .slick-dots li button:before {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  top: calc(50% - 4px);
+  left: calc(50% - 4px);
+}
+
 @media (max-width: 768px) {
   .slick-prev,
   .slick-next {
@@ -1163,16 +1171,27 @@ input {
   }
 }
 
+@media (max-width: 1024px) {
+  .slider-for {
+    margin: 0;
+  }
+}
 @media (max-width: 780px) {
   .slider-nav {
     display: none !important;
   }
 
+  .card-products__info {
+    width: 100%;
+  }
+
   .slider-for {
+    margin-right: 0 !important;
     margin-left: unset !important;
   }
   .sld-wrp {
     display: flex;
+    left: 0;
     justify-content: center;
   }
   .shop__switcher {

@@ -52,6 +52,7 @@ $('document').ready(function () {
       {
         breakpoint: 781,
         settings: {
+          dots: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
@@ -77,33 +78,6 @@ $('document').ready(function () {
         },
       },
     ],
-  });
-
-  // ДОБАВЛЕНИЕ И УДАЛЕНИЕ АКТИВНОГО КЛАССА ДЛЯ ТОЧЕК СЛАЙДЕРА
-  var itemCount = $('.slider-for');
-  itemCount = itemCount.length;
-
-  $('.slider-for').on('afterChange', function (currentSlide) {
-    var banners = $('.shop__switcher-dot');
-    var currentSlide = $('.slider-for').slick('slickCurrentSlide');
-    console.log(currentSlide);
-
-    if (currentSlide == 0) {
-      banners[currentSlide].classList.add('shop__switcher-dot--active');
-      $('.shop__switcher-dot')
-        .not(banners[currentSlide])
-        .removeClass('shop__switcher-dot--active');
-    } else if (currentSlide == itemCount) {
-      banners[2].classList.add('shop__switcher-dot--active');
-      $('.shop__switcher-dot')
-        .not(banners[2])
-        .removeClass('shop__switcher-dot--active');
-    } else {
-      banners[1].classList.add('shop__switcher-dot--active');
-      $('.shop__switcher-dot')
-        .not(banners[1])
-        .removeClass('shop__switcher-dot--active');
-    }
   });
 
   let custom_surname_label = '';
