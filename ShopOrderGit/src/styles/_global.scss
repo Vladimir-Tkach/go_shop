@@ -1,5 +1,5 @@
 //------------------GLOBAL-SRYLE-------------------------
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 * {
   padding: 0;
@@ -81,7 +81,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '←';
+  content: "←";
 }
 
 .slick-next:before {
@@ -93,7 +93,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '→';
+  content: "→";
 }
 
 .slick-prev {
@@ -157,7 +157,7 @@ a:hover {
   background: #000;
   text-align: center;
   color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -372,22 +372,22 @@ a:hover {
   overflow: hidden;
 }
 
-input[type='text']::-ms-clear {
+input[type="text"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='text']::-ms-reveal {
+input[type="text"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -606,7 +606,7 @@ textarea {
   }
 
   &__radio-price {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -635,9 +635,9 @@ textarea {
   .person_data {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 70px;
     column-gap: 20px;
     row-gap: 15px;
+    margin-bottom: 20px;
   }
 
   .address_data_form {
@@ -667,7 +667,7 @@ textarea {
 }
 
 .error-txt {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -693,9 +693,11 @@ textarea {
   position: relative;
   padding-top: 4px;
 }
-
+label:hover {
+  cursor: pointer;
+}
 .radio-btn + label::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -714,7 +716,7 @@ textarea {
 }
 
 .radio-btn + label::after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 0.75em;
   height: 0.7em;
@@ -734,6 +736,18 @@ textarea {
 
 .radio-btn:checked + label::after {
   background-color: #ffffff;
+}
+
+@media (max-width: 1500px) {
+  .order {
+    column-gap: 80px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .order {
+    column-gap: 40px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -827,7 +841,7 @@ textarea {
     padding: 0 10px;
     outline: none;
     appearance: none;
-    background: url('../images/dropedArrow.png') no-repeat;
+    background: url("../images/dropedArrow.png") no-repeat;
     background-position-x: calc(100% - 15px);
     background-position-y: center;
     -moz-user-select: none;
@@ -867,7 +881,7 @@ textarea {
 }
 
 .data-processing-txt {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 12px;
   line-height: 13px;

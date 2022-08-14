@@ -1,5 +1,5 @@
 //------------------GLOBAL-SRYLE-------------------------
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 * {
   padding: 0;
@@ -86,7 +86,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '←';
+  content: "←";
 }
 
 .slick-next:before {
@@ -98,7 +98,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '→';
+  content: "→";
 }
 
 .slick-prev {
@@ -162,7 +162,7 @@ a:hover {
   background: #000;
   text-align: center;
   color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -385,22 +385,22 @@ a:hover {
   overflow: hidden;
 }
 
-input[type='text']::-ms-clear {
+input[type="text"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='text']::-ms-reveal {
+input[type="text"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -598,7 +598,7 @@ input {
   }
 
   &__article {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -709,13 +709,6 @@ input {
 
   .product-added__modal {
     padding: 0;
-  }
-
-  .card-products__price-and-buy-block {
-    display: grid !important;
-    grid-template-columns: 100%;
-    column-gap: 16px;
-    row-gap: 16px;
   }
 
   .card-products__price {
@@ -868,7 +861,7 @@ input {
         left: 50%;
         transform: translateX(calc(-50% + 20px));
         transform-origin: center center;
-        font-family: 'generalFont';
+        font-family: "generalFont";
         font-style: normal;
         line-height: 52px;
 
@@ -909,11 +902,9 @@ input {
   &__info {
     padding: 40px 70px;
     background: #141414;
-    width: calc(54% - 1px);
+    width: 100%;
     border-left: 1px solid rgba(0, 0, 0, 0.4);
     position: relative;
-    right: 20px;
-    margin-right: -20px;
   }
 
   &__title-block {
@@ -930,7 +921,7 @@ input {
   }
 
   &__vendor-code {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1034,7 +1025,7 @@ input {
   }
 
   &__text {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1093,7 +1084,7 @@ input {
     padding: 0 10px;
     outline: none;
     appearance: none;
-    background: #232323 url('../images/dropedArrow.png') no-repeat;
+    background: #232323 url("../images/dropedArrow.png") no-repeat;
     background-position-x: calc(100% - 15px);
     background-position-y: center;
     -moz-user-select: none;
@@ -1116,7 +1107,7 @@ input {
     column-gap: 5%;
   }
 
-  input[type='text']::-ms-clear {
+  input[type="text"]::-ms-clear {
     display: none;
     width: 0;
     height: 0;
@@ -1138,7 +1129,7 @@ input {
   }
 
   .card-products__info {
-    width: calc(100% - 80px);
+    width: 100%;
     padding: 40px;
     right: 0;
     margin-top: 35px;
@@ -1173,7 +1164,7 @@ input {
 
 @media (max-width: 1024px) {
   .slider-for {
-    margin: 0;
+    margin-left: 150px;
   }
 }
 @media (max-width: 780px) {
@@ -1334,6 +1325,9 @@ input {
     font-size: 24px;
     line-height: 32px;
   }
+  .slick-slide {
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1364,13 +1358,8 @@ input {
     left: 49%;
     font-size: 24px;
   }
-}
-
-@media (max-width: 400px) {
-  .card-products__gallery-image.main_image .custom_label_preview {
-    top: 19%;
-    left: 47%;
-    font-size: 20px;
+  .card-products__price-and-buy-block {
+    justify-content: space-between;
   }
 }
 
@@ -1381,11 +1370,18 @@ input {
     font-size: 20px;
   }
 }
-@media (max-width: 400px) {
-  .card-products__gallery-image.main_image .custom_label_preview {
-    top: 19%;
-    left: 47%;
-    font-size: 20px;
+@media (max-width: 375px) {
+  .card-products__price-and-buy-block {
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+  .card-products__buy-block {
+    width: 100%;
+  }
+  .card-products__price {
+    margin-right: 0px;
   }
 }
 
@@ -1394,6 +1390,9 @@ input {
     top: 17%;
     left: 46%;
     font-size: 16px;
+  }
+  .card-products__buy-block {
+    width: 100%;
   }
 }
 

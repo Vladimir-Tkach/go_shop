@@ -1,5 +1,5 @@
 //------------------GLOBAL-SRYLE-------------------------
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 * {
   padding: 0;
@@ -97,7 +97,7 @@ a:hover {
 
 .slick-prev:before {
   position: absolute !important;
-  content: '' !important;
+  content: "" !important;
   top: 0;
   bottom: 0;
   right: 0;
@@ -109,7 +109,7 @@ a:hover {
 
 .slick-next:before {
   position: absolute !important;
-  content: '' !important;
+  content: "" !important;
   top: 0;
   bottom: 0;
   right: 0;
@@ -241,6 +241,7 @@ a:hover {
   align-items: flex-end;
   height: 100%;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .shop__title {
@@ -353,8 +354,8 @@ a:hover {
 
 @media (max-width: 768px) {
   .shop__banner-title {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 28px;
+    line-height: 32px;
   }
 
   .shop__banner-arrow {
@@ -364,6 +365,10 @@ a:hover {
 
   .shop__banner-swiper .slick-list .slick-track {
     height: 580px;
+  }
+
+  .shop__banner-item {
+    padding: 20px 20px 40px 20px;
   }
 }
 
@@ -392,6 +397,11 @@ a:hover {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #ffffff;
+    opacity: 0.7;
+    transition: 0.3s;
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__nav-list-bottom:last-child {
@@ -461,7 +471,11 @@ a:hover {
     width: fit-content;
   }
 }
-
+@media (max-width: 375px) {
+  .shop__nav-list-top {
+    column-gap: 10px;
+  }
+}
 //------------------SHOP-NAV-------------------------
 
 //-----------------------SHOP-SWIPER------------------------
@@ -497,7 +511,7 @@ a:hover {
     text-align: center;
     color: #fff;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -701,7 +715,6 @@ a:hover {
     opacity: 0.4;
   }
 }
-
 @media (max-width: 1024px) {
   .gender-select__text {
     font-size: 28px;
@@ -712,7 +725,6 @@ a:hover {
   .gender-select {
     flex-wrap: wrap;
   }
-
   .gender-select__item {
     width: 100%;
   }
@@ -787,7 +799,11 @@ a:hover {
     text-transform: uppercase;
   }
 }
-
+@media (max-width: 1440px) {
+  .categories__list {
+    margin-bottom: 80px;
+  }
+}
 @media (min-width: 769px) {
   .categories__item:hover .categories__item-arrow {
     display: block;
@@ -795,7 +811,6 @@ a:hover {
   .categories__item-name {
     margin-right: 15px;
   }
-
   .categories__item-arrow {
     display: none;
     margin-right: auto;
@@ -805,8 +820,8 @@ a:hover {
 @media (max-width: 768px) {
   .categories__list {
     display: block;
+    margin-bottom: 20px;
   }
-
   .categories__item {
     width: 100%;
 

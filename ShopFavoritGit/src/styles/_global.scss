@@ -1,5 +1,5 @@
 //------------------GLOBAL-SRYLE-------------------------
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 * {
   padding: 0;
@@ -78,7 +78,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '←';
+  content: "←";
 }
 
 .slick-next:before {
@@ -90,7 +90,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '→';
+  content: "→";
 }
 
 .slick-prev {
@@ -152,7 +152,7 @@ a:hover {
   background: #000;
   text-align: center;
   color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -375,22 +375,22 @@ a:hover {
   overflow: hidden;
 }
 
-input[type='text']::-ms-clear {
+input[type="text"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='text']::-ms-reveal {
+input[type="text"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -590,6 +590,13 @@ textarea {
     font-size: 14px;
     line-height: 16px;
   }
+  .products__item-txt {
+    gap: 8px;
+  }
+  .products__item-txt {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -607,7 +614,7 @@ textarea {
     justify-content: center;
   }
   .products__item {
-    width: calc(100% - 40px);
+    width: 100%;
   }
 }
 //------------------FAVORITE-STYLE-END-------------------------

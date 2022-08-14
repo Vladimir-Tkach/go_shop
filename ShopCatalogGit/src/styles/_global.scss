@@ -1,5 +1,5 @@
 //------------------GLOBAL-SRYLE-------------------------
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 * {
   padding: 0;
@@ -80,7 +80,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '←';
+  content: "←";
 }
 
 .slick-next:before {
@@ -92,7 +92,7 @@ a:hover {
   letter-spacing: 0.02em;
   font-weight: 600;
   cursor: pointer;
-  content: '→';
+  content: "→";
 }
 
 .slick-prev {
@@ -150,7 +150,7 @@ a:hover {
   background: #000;
   text-align: center;
   color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -365,22 +365,22 @@ a:hover {
   overflow: hidden;
 }
 
-input[type='text']::-ms-clear {
+input[type="text"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='text']::-ms-reveal {
+input[type="text"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -516,7 +516,7 @@ input {
 
 .input-clear {
   position: absolute;
-  right: 6px;
+  right: 12px;
   top: 17px;
   font-size: 16px;
   line-height: 100%;
@@ -585,8 +585,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    margin-top: 30px;
+    padding: 12px 0;
+    margin-top: 8px;
   }
 
   &__btn-txt {
@@ -609,8 +609,7 @@ input {
 .modal__content .modal__btn:not(:nth-child(2)) {
   margin-top: 5px;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   #search-modal,
   #filters-modal {
     .modal__content {
@@ -747,7 +746,7 @@ input {
       user-select: none;
 
       &::before {
-        content: '';
+        content: "";
         display: inline-block;
         width: 20px;
         height: 20px;
@@ -820,6 +819,11 @@ input {
 
   .catalog__filters-mobail {
     display: block;
+  }
+
+  .modal__content {
+    width: 100%;
+    height: calc(100% - 40px);
   }
 }
 
@@ -906,7 +910,7 @@ input {
 
   .catalog__filters-mobail-item-close {
     font-size: 12px;
-    padding-top: 1px;
+    padding-top: 3px;
   }
   .catalog__filters-mobail-nav-list {
     width: 420px;
@@ -965,7 +969,7 @@ input {
   }
 
   &__item {
-    width: calc((100% - 60px) / 3);
+    width: calc((100% - 40px) / 3);
   }
 
   &__item-image {
@@ -996,7 +1000,7 @@ input {
     text-align: center;
     color: #fff;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -1113,7 +1117,7 @@ input {
     justify-content: center;
   }
   .products__list .products__item {
-    width: calc(100% - 20px);
+    width: 100%;
   }
 
   .products__item-txt {
@@ -1143,7 +1147,6 @@ input {
   .products__item-txt {
     font-size: 14px;
     line-height: 20px;
-    padding: 12px 0 12px 12px;
     height: calc(80px - 24px);
   }
 }

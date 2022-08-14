@@ -76,10 +76,11 @@ html(lang='en')
 							.catalog__filters_checkbox
 								input(type="checkbox" name="collection_summer_mobile" id='collection_summer_mobile')
 								label(for="collection_summer_mobile") Летняя 
-				.modal__btn(id="modal-apply-btn-filters")
-					.modal__btn-txt Применить
-				.modal__btn.modal-reset-btn(id="modal-reset-btn-filters")
-					.modal__btn-txt Сбросить
+					.action__btn
+						.modal__btn(id="modal-apply-btn-filters")
+							.modal__btn-txt Применить
+						.modal__btn.modal-reset-btn(id="modal-reset-btn-filters")
+							.modal__btn-txt Сбросить
 
 		.catalog__modal.modal.hide(id='gender-modal') 
 			.modal__content
